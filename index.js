@@ -13,7 +13,7 @@ async function getNumberFact(){
     if (numberInput !== null) {
         let number = numberInput.value;
         if (number != ''){
-            let numberResponce = await fetch(`http://numbersapi.com/${number}`)
+            let numberResponce = await fetch(`https://numbersapi.com/${number}`)
             let numberData = await numberResponce.text();
             fact.classList.remove("hidden");
             factText.innerHTML = numberData;
@@ -21,7 +21,7 @@ async function getNumberFact(){
     } else if (yearInput !== null) {
         let year = yearInput.value;
         if (year != ''){
-        let yearResponse = await fetch(`http://numbersapi.com/${year}/year`);
+        let yearResponse = await fetch(`https://numbersapi.com/${year}/year`);
         let yearData = await yearResponse.text();
             fact.classList.remove("hidden");
             factText.innerHTML = yearData;
